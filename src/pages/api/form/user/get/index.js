@@ -7,7 +7,7 @@ const handler = async (req, res) => {
             // console.log(data)
             const feedback = await getUser(data)
             console.log(feedback)
-            
+                
             if(!feedback.data) feedback.data = 'no data found'
             if(feedback.err) throw(feedback)
 
