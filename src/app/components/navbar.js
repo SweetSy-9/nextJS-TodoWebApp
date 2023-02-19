@@ -1,3 +1,4 @@
+
 import Link from "next/link"
 import { usePathname, useRouter }   from "next/navigation"
 import { useSession, getSession, signOut } from "next-auth/react"
@@ -47,7 +48,7 @@ const navComponent = () => {
                         <a href="/contact" className={pathName == '/contact' ? activeLink : unactiveLink}>Contact</a>
                     </li>
                     {status === 'authenticated' ? <TaskLink /> : ''}
-                    <li className="mt-5 ml-auto md:mt-0 md:hidden">
+                    <li className="mt-5 mr-auto md:mt-0 md:hidden">
                         {status === 'authenticated' ? <ButtonLogout /> : <ButtonLogin />}
                     </li>
                 </ul>

@@ -5,7 +5,7 @@ const ButtonLogin = () => {
     return (
             <button 
             onClick={ () => {
-                
+                router.push('/login')
             } } 
             className="flex gap-2 py-2 px-5 rounded text-white bg-gray-700 hover:bg-gray-200 hover:text-gray-700 transition-all ease-in duration-200">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">

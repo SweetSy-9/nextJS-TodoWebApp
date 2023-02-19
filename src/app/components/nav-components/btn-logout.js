@@ -1,15 +1,19 @@
 import { signOut, useSession } from "next-auth/react"
+import { useState } from "react"
 
 const ButtonLogout = () => {
+    const [moreActive, setMoreActive] = useState(false)
     const { data: session, status } = useSession()
     const openMoreAccount = () => {
-        console.log('x')
-        document.querySelector('#account-more').classList.toggle('h-0')
-        console.log(document.querySelector('#account-more'))
+        if(moreActive) {
+            setMoreActive(false)
+        } else {
+            setMoreActive(true)
+        }
     }
     const Logout = () => {
         signOut()
-    }
+    }   
 
     return (
         <div>
@@ -22,12 +26,12 @@ const ButtonLogout = () => {
                 {session.user.name.length < 10 
                 ? session.user.name
                 : session.user.name.substring(0, 8)+'..'}
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                <svg id="svg-logout-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
             </button>
             <div className="w-full">
-                <ul id="account-more" className="absolute flex flex-col overflow-hidden bg-gray-800 ml-0 mt-1 rounded text-right global-transition">
+                <ul className={moreActive ? "absolute flex flex-col overflow-hidden bg-gray-800 ml-0 mt-1 rounded text-right global-transition" : "absolute flex flex-col overflow-hidden bg-gray-800 ml-0 mt-1 rounded text-right global-transition h-0"} >
                     <li 
                     onClick={Logout}
                     className="flex gap-2 hover:bg-gray-200 hover:text-gray-700 global-transition px-8 py-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
