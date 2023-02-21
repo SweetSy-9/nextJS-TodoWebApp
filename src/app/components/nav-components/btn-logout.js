@@ -31,7 +31,7 @@ const ButtonLogout = () => {
                 </svg>
             </button>
             <div className="w-full">
-                <ul className={moreActive ? "z-10 absolute flex flex-col overflow-hidden border-gray-200 bg-gray-700 ml-0 mt-1 rounded text-right global-transition" : "absolute flex flex-col overflow-hidden bg-gray-800 ml-0 mt-1 rounded text-right global-transition h-0"} >
+                <ul className={`z-10 absolute flex flex-col overflow-hidden border-gray-200 bg-gray-700 ml-0 mt-1 rounded text-right global-transition ${moreActive ? "max-h-52" : "max-h-0"}`} >
                     <li 
                     onClick={Logout}
                     className="cursor-pointer flex gap-2 hover:bg-gray-200 hover:text-gray-700 global-transition px-8 py-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">

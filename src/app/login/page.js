@@ -17,18 +17,18 @@ const Login = () => {
         const res = await signIn('login-credentials', {
             username: userData.username,
             password: userData.password,
-            redirect: true,
+            redirect: false,
             callbackUrl:'/'
         })
     }
-    const doSession = async (context) => {
-        const {req, res} = context
-        const session = await getSession({req})
-        if(session) {
-            console.log(session)
-           return session 
-        }
-    }
+    // const doSession = async (context) => {
+    //     const {req, res} = context
+    //     const session = await getSession({req})
+    //     if(session) {
+    //         console.log(session)
+    //        return session 
+    //     }
+    // }
     return (
         <form onSubmit={ createAuth }>
             <p className="mb-4">Please login to your account</p>

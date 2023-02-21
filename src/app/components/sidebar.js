@@ -1,4 +1,15 @@
+import { useState } from "react"
+
 const Sidebar = () => {
+    const [stateTimestamp, setStateTimestamp] = useState(false)
+
+    const openSideSub = (e) => {
+      if(stateTimestamp) {
+        setStateTimestamp(false)
+      } else {
+        setStateTimestamp(true)
+      }
+    }
     return (
             <div
               className="sidebar absolute w-[300px] h-full overflow-y-auto text-center bg-gray-800 rounded-tr rounder-br px-2"
@@ -27,6 +38,7 @@ const Sidebar = () => {
               </div>
               <div className="my-4 bg-gray-600 h-[1px]"></div>
               <div
+                onClick={openSideSub}
                 className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-700 text-white"
                 //onclick here
               >
@@ -41,8 +53,7 @@ const Sidebar = () => {
                 </div>
               </div>
               <div
-                className="text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 bg-gray-700 font-bold p-2 rounded"
-                id="submenu"
+                className={`text-left text-sm w-4/5 mx-auto text-gray-200 bg-gray-700 font-bold overflow-hidden rounded mt-2 global-transition ${stateTimestamp ? 'py-2 max-h-52' : 'max-h-0'}`}
               >
                 <h1 onClick={()=> {
                         const box = document.querySelector('#cb-timespan-today')
