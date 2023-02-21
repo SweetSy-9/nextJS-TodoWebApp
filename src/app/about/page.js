@@ -98,7 +98,7 @@ const About = () => {
                 </div> */}
             </div>
             <div className="flex justify-center items-center bg-[rgba(0,0,0,.7)] bg-[url('/images/about/about-1.jpg')] bg-center bg-no-repeat bg-cover bg-fixed bg-blend-darken w-full h-80">
-                <p className="mx-2 font-medium italic text-center">I know nothing much except fate are seen. But with the knowledge given, may my dua reach it's 'Arasy.</p>
+                <p className="mx-2 font-medium italic text-center">I know nothing much except fate are seen. But with the knowledge given, i'll try to reach my destination and may my dua reach it's 'Arasy.</p>
             </div>
             <div className="flex flex-col mx-4 gap-10">
                 <span className="whitespace-nowrap text-center">
