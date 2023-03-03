@@ -97,4 +97,20 @@ const signUpForm = () => {
     )
 }
 
+// function keepUpdate(times) {
+//     console.log('updating : '+times)
+//     const el = document.querySelectorAll('.css-fe557-JourneyBottomNav_button')
+//     if(el.length != 2) {
+//         setTimeout(() => {
+//             keepUpdate(times+5)
+//         }, 5000)
+//     }
+//     else {
+//         el[1].click()
+//         setTimeout(() => {
+//             keepUpdate(0)
+//         }, 1000)
+//     }
+// }
+
 export default signUpForm

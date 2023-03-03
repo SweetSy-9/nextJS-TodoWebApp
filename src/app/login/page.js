@@ -1,16 +1,18 @@
 'use client'
 
 import { signIn, useSession, getSession} from "next-auth/react"
-import { useRouter } from "next/navigation"
+import { redirect, useRouter } from "next/navigation"
 import { useState } from "react"
+// import { useSession } from "next-auth/react"
 
 const Login = () => {
     const [userData, setUserData] = useState({ username:'', password:'' })
-    
+
     const router = useRouter()
     const routeCreate = () => {
         router.push('/login/create')
     }
+
     const createAuth = async (e) => {
         e.preventDefault()
         console.log(userData)
@@ -20,6 +22,11 @@ const Login = () => {
             redirect: false,
             callbackUrl:'/'
         })
+        if(res.status) {
+            if(res.status === 401)  return alert('Username / Password Wrong')
+            if(res.status === 200) return router.push('/')
+        }
+        return alert('something went wrong!')
     }
     // const doSession = async (context) => {
     //     const {req, res} = context

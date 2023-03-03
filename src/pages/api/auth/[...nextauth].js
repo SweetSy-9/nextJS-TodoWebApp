@@ -40,17 +40,17 @@ export const authOptions = {
   pages: {
     signIn:"/login"
   },
-  callbacks: {
-    async session({ session, token }) {
-      session.user = token.user;
-      return session;
-    },
-    async jwt({ token, user }) {
-      if (user) {
-        token.user = user;
-      }
-      return token;
-    },
-  },
+  // callbacks: {
+  //   async session({ session, token }) {
+  //     session.user = token.user;
+  //     return session;
+  //   },
+  //   async jwt({ token, user }) {
+  //     if (user) {
+  //       token.user = user;
+  //     }
+  //     return token;
+  //   },
+  // },
 }
 export default NextAuth(authOptions)
