@@ -10,9 +10,9 @@ import { usePathname } from 'next/navigation'
 import { Component } from 'react'
 
 export default function RootLayout({ children, session}) {
-  // alert(usePathname())
+  const path = usePathname()
   
-  if(['/login', '/login/create'].includes(usePathname())) {
+  if(['/login', '/login/create'].includes(path)) {
     return (
       <html lang="en">
         {/*
@@ -27,7 +27,7 @@ export default function RootLayout({ children, session}) {
           </SessionProvider>
       </html>
     )  
-  } else if(['/', '/task'].includes(usePathname())) {
+  } else if(['/', '/task'].includes(path)) {
     return (
       <html lang="en">
         {/*
