@@ -82,7 +82,7 @@ const SignUpForm = () => {
             </button>
         </div>
         <div className="flex items-center justify-between pb-6">
-            <p className="mb-0 mr-2">Already have an accoun?</p>
+            <p className="mb-0 mr-2">Already have an account?</p>
             <button
             onClick={ loginRoute }
             type="button"

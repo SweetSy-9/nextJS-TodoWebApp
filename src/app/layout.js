@@ -12,7 +12,7 @@ import { Component } from 'react'
 export default function RootLayout({ children, session}) {
   const path = usePathname()
   
-  if(['/login', '/login/create'].includes(path)) {
+  if(['/login', '/login/create', '/task'].includes(path)) {
     return (
       <html lang="en">
         {/*
@@ -27,7 +27,7 @@ export default function RootLayout({ children, session}) {
           </SessionProvider>
       </html>
     )  
-  } else if(['/', '/task'].includes(path)) {
+  } else if(['/'].includes(path)) {
     return (
       <html lang="en">
         {/*
