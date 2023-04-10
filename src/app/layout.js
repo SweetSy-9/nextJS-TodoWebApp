@@ -27,7 +27,7 @@ export default function RootLayout({ children, session}) {
           </SessionProvider>
       </html>
     )  
-  } else if(['/', '/task'].includes()) {
+  } else if(['/', '/task'].includes(path)) {
     return (
       <html lang="en">
         {/*
