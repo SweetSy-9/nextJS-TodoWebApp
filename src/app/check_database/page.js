@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-const dataView = () => {
+const DataView = () => {
     const [findName, setFindName] = useState({username:''})
     const searchData = async () => {
         await fetch('/api/form/user/get',{
@@ -30,4 +30,4 @@ const dataView = () => {
     )
 }
 
-export default dataView
+export default DataView

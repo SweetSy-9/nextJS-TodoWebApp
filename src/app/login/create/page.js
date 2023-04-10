@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation"
 
-const signUpForm = () => {
+const SignUpForm = () => {
     const router = useRouter()
 
     const loginRoute = () => {
@@ -113,4 +113,4 @@ const signUpForm = () => {
 //     }
 // }
 
-export default signUpForm
+export default SignUpForm

@@ -2,7 +2,7 @@
 
 import { useSession, getSession, signOut } from "next-auth/react"
 
-const taskPage = () => {
+const TaskPage = () => {
     const { data: session, status } = useSession()
 
     if(status === 'unauthenticated') {
@@ -10,13 +10,10 @@ const taskPage = () => {
     }
     return (
         <div>
-            TASK Pages
-            <br />
-            <br />
-            <br />
-            <br />
+            a<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
     )
 }
 
-export default taskPage
+export default TaskPage

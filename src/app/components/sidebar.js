@@ -23,10 +23,10 @@ const Sidebar = () => {
               className={`sidebar max-w-[0px] md:max-w-[300px] overflow-x-hidden overflow-y-auto text-center bg-gray-800 rounded-tr rounder-br px-0 md:px-2 global-transition ${sideSub ? 'max-w-[500px] pl-2 pr-2' : ''}`}
             >
               <span 
-                className={`absolute left-0 bg-gray-700 p-2 top-1/2 md:hidden rounded-r-2xl global-transition ${sideSub ? 'ml-[240px]' : ''}`}
+                className={`absolute left-0 bg-gray-700 p-2 top-1/2 md:hidden rounded-r-2xl cursor-pointer hover:bg-gray-900 global-transition ${sideSub ? 'ml-[240px]' : ''}`}
                 onClick={openSideSub}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-6 h-6 global-transition ${sideSub ? 'rotate-180' : ''}`}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
                 </svg>
               </span>
